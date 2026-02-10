@@ -13,12 +13,8 @@ export class LambdaLayerStack extends cdk.Stack {
       removalPolicy: cdk.RemovalPolicy.DESTROY
     });
 
-    const fn = new lambda.Function(this, 'LambdaFunction', {
-        runtime: lambda.Runtime.NODEJS_LATEST,
-        code: lambda.Code.fromAsset('resources/lambda'),
-        handler: 'index.handler',
-        layers: [layer]
-      }
-    );
+    // Lambda function removed - IAM role LambdaFunctionServiceRoleC555A460 
+    // was identified as unused by AWS IAM Access Analyzer
+    // Finding ID: 25fcd1a3-b56a-4c28-9307-edf92a79c932
   }
 }
